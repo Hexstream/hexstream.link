@@ -1,0 +1,58 @@
+main {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+}
+
+#accounts {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#accounts > h1 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-top: 0;
+    font-family: "Kaushan Script", serif;
+    font-size: 4.5vmin;
+    margin-right: 0.5em;
+}
+
+@media (width <= 28em) {
+    #accounts {
+        flex-flow: column;
+    }
+    #accounts > h1 {
+        writing-mode: revert;
+        transform: revert;
+        font-size: 1.5em;
+        margin-right: 0;
+        margin-bottom: 0.5em;
+    }
+}
+
+#accounts .navlist {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#accounts .navlist section {
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#accounts .navlist section h1 {
+    flex: none;
+    margin-top: 0;
+    font-size: 8vmin;
+}
+
+#footer {
+    margin-top: 0;
+}

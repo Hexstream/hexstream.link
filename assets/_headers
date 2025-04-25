@@ -1,0 +1,7 @@
+https://hexstream.link/*
+  ! Cache-Control
+  Cache-Control: public, max-age=86400
+
+/special/status.txt
+  ! Cache-Control
+  Cache-Control: no-store

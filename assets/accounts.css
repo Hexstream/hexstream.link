@@ -1,0 +1,157 @@
+#page-header .description {
+    margin-top: 0.25em;
+}
+
+#page-header + section {
+    margin-top: 0;
+}
+
+main {
+    position: initial;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+}
+
+main .scroll {
+    margin: 0 0 1em;
+}
+
+main section {
+    margin-top: 0.8em;
+}
+
+main section > p {
+    text-align: center;
+}
+
+.navtable {
+    font-size: medium;
+    max-width: max-content;
+}
+
+.navtable colgroup.main,
+.navtable :is(th, td) {
+    border: none;
+}
+
+.navtable .anchor {
+    font-size: initial;
+}
+
+@media (hover: none) {
+    .navtable tr .anchor,
+    .navtable tr:hover .anchor {
+        opacity: 0.5;
+    }
+}
+
+.navtable .shortlink {
+    text-align: start;
+    border-top: 0.15em solid black;
+    border-left: 0.15em solid black;
+    border-bottom: 0.15em solid black;
+    border-right: none;
+}
+
+.navtable .destination {
+    background-color: #E0E0E0;
+    border-top: 0.15em solid black;
+    border-right: 0.15em solid black;
+    border-bottom: 0.15em solid black;
+    border-left: none;
+}
+
+.navtable .destination.noa {
+    padding-left: 0.2em;
+}
+
+.navtable .destination .highlight {
+    font-weight: bold;
+}
+
+.navtable .comments {
+    border: none;
+    background-color: transparent;
+}
+
+.navtable tr:not(:last-child) .comments {
+    padding-bottom: 1.25em;
+}
+
+.navtable .comments a {
+    display: revert;
+    padding: 0;
+    text-decoration: revert;
+}
+
+.navtable .comments a[href]:is(:hover, :focus) {
+    background-color: revert;
+    text-decoration: underline;
+}
+
+
+html:has(#show-destinations:not(:checked)) .destination,
+html:has(    #show-comments:not(:checked)) :is(section > p, tr:has(.comments)) {
+    display: none;
+}
+
+html:has(#show-destinations:not(:checked)) .shortlink {
+    border-right: 0.15em solid black;
+}
+
+
+@media (width <= 37.5em) {
+    #page-options .button-control label span {
+        display: none;
+    }
+
+    #page-options .button-control label:hover {
+        text-decoration: revert;
+    }
+
+    label[for="show-destinations"]::after {
+        content: "🔗";
+    }
+
+    label[for="show-comments"]::after {
+        content: "🛈";
+    }
+}
+
+@media not (width <= 37.5em) {
+    .navtable .shortlink .highlight {
+        color: green;
+    }
+}
+
+@media (width <= 37.5em) {
+    .navtable .shortlink .prefix {
+        display: none;
+    }
+}
+
+@media (width <= 31.5em) {
+    .navtable .destination .prefix {
+        display: none;
+    }
+}
+
+@media (width <= 18.5em) {
+    html:has(#show-destinations:checked) .navtable {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    html:has(#show-destinations:checked) .navtable tbody .anchor {
+        display: none;
+    }
+
+    html:has(#show-destinations:checked) .navtable .shortlink {
+        border-left: none;
+    }
+
+    html:has(#show-destinations:checked) .navtable .destination {
+        border-right: none;
+    }
+}

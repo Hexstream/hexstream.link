@@ -1,0 +1,19 @@
+{
+    "name": "hexstream-link",
+
+    "pages_build_output_dir": "./public",
+    "send_metrics": true,
+
+    "compatibility_date": "2024-05-13",
+
+    "kv_namespaces": [
+        {
+            "binding": "REDIRECTS",
+            "id": "12979286e9ad47e69eef03eb9e2cf550"
+        }
+    ],
+
+    "limits": {
+        "cpu_ms": 10
+    }
+}

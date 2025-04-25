@@ -1,0 +1,4 @@
+Sitemap: https://hexstream.link/sitemap.xml
+
+User-agent: *
+Disallow: /special/
