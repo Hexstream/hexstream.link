@@ -51,6 +51,7 @@ main {
     flex: none;
     margin-top: 0;
     font-size: 8vmin;
+    white-space: nowrap;
 }
 
 #footer {
