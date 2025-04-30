@@ -88,6 +88,10 @@
         "value": "https://ponies.hexstream.net/images/#hexstream_pony-town"
     },
     {
+        "key": "/reactions",
+        "value": "https://ponies.hexstream.net/images/#reactions"
+    },
+    {
         "key": "/values",
         "value": "https://workshop.hexstream.xyz/svg/originals/hexstream-hierarchy-of-awesomeness.svg"
     },
