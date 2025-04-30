@@ -126,7 +126,11 @@ html:has(#show-destinations:not(:checked)) .shortlink {
 }
 
 @media (width <= 37.5em) {
-    .navtable .shortlink .prefix {
+    html:has(#show-destinations:not(:checked)) .navtable .shortlink .highlight {
+        color: green;
+    }
+
+    html:has(#show-destinations:checked) .navtable .shortlink .prefix {
         display: none;
     }
 }
