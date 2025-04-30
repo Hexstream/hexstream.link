@@ -90,5 +90,9 @@
     {
         "key": "/values",
         "value": "https://workshop.hexstream.xyz/svg/originals/hexstream-hierarchy-of-awesomeness.svg"
+    },
+    {
+        "key": "/other-langs",
+        "value": "https://www.hexstreamsoft.com/non-free/images/how-a-common-lisp-programmer-views-users-of-other-languages.jpg"
     }
 ]
