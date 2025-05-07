@@ -1,0 +1,50 @@
+[
+    {
+        "key": "/github",
+        "value": "https://github.com/Hexstream"
+    },
+    {
+        "key": "/linkedin",
+        "value": "https://www.linkedin.com/in/hexstream"
+    },
+    {
+        "key": "/keybase",
+        "value": "https://keybase.io/hexstream"
+    },
+    {
+        "key": "/discord",
+        "value": "https://abc.hexstream.xyz/#discord"
+    },
+    {
+        "key": "/telegram",
+        "value": "https://t.me/Hexstream"
+    },
+    {
+        "key": "/reddit",
+        "value": "https://www.reddit.com/user/Loginwallmenot/"
+    },
+    {
+        "key": "/launchpad",
+        "value": "https://bugs.launchpad.net/~hexstream"
+    },
+    {
+        "key": "/cliki",
+        "value": "https://cliki.net/Jean-Philippe%20Paradis"
+    },
+    {
+        "key": "/x",
+        "value": "https://x.com/HexstreamSoft"
+    },
+    {
+        "key": "/hacker-news",
+        "value": "https://news.ycombinator.com/user?id=Hexstream"
+    },
+    {
+        "key": "/coderwall",
+        "value": "https://coderwall.com/Hexstream"
+    },
+    {
+        "key": "/lobsters",
+        "value": "https://lobste.rs/u/Hexstream"
+    }
+]

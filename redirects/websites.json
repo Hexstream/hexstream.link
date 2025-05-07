@@ -1,0 +1,22 @@
+[
+    {
+        "key": "/status",
+        "value": "https://status.abc.hexstream.xyz/"
+    },
+    {
+        "key": "/mop",
+        "value": "https://clos-mop.hexstreamsoft.com/"
+    },
+    {
+        "key": "/tips",
+        "value": "https://notes-and-tips.hexstreamsoft.com/"
+    },
+    {
+        "key": "/cv",
+        "value": "https://cv.hexstream.expert/"
+    },
+    {
+        "key": "/config",
+        "value": "https://status-quo.hexstream.expert/"
+    }
+]
