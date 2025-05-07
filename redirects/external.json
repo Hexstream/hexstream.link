@@ -2,5 +2,29 @@
     {
         "key": "/clhs",
         "value": "https://www.lispworks.com/documentation/HyperSpec/Front/index.htm"
+    },
+    {
+        "key": "/pcl",
+        "value": "https://gigamonkeys.com/book/"
+    },
+    {
+        "key": "/awesome-cl",
+        "value": "https://github.com/CodyReichert/awesome-cl"
+    },
+    {
+        "key": "/cookbook",
+        "value": "https://lispcookbook.github.io/cl-cookbook/"
+    },
+    {
+        "key": "/success/companies",
+        "value": "https://github.com/azzamsa/awesome-lisp-companies"
+    },
+    {
+        "key": "/success/lispworks",
+        "value": "https://www.lispworks.com/success-stories/"
+    },
+    {
+        "key": "/success/franz",
+        "value": "https://franz.com/success/"
     }
 ]
