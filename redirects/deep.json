@@ -22,5 +22,9 @@
     {
         "key": "/other-langs",
         "value": "https://www.hexstreamsoft.com/non-free/images/how-a-common-lisp-programmer-views-users-of-other-languages.jpg"
+    },
+    {
+        "key": "/web-developer",
+        "value": "https://www.hexstreamsoft.com/non-free/images/web-developer.png"
     }
 ]
