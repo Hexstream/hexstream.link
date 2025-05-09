@@ -8,6 +8,10 @@
         "value": "https://status-quo.hexstream.expert/hardware/planck-ez/#my-config"
     },
     {
+        "key": "/me",
+        "value": "https://status-quo.hexstream.expert/articles/planck-ez-interview/images/hexstream-2020-11-18.jpg"
+    },
+    {
         "key": "/oc",
         "value": "https://ponies.hexstream.net/images/#hexstream_pony-town"
     },
