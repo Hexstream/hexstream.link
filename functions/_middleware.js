@@ -7,22 +7,41 @@ async function analyzeRequest (request, redirects) {
     return [destination, requestType];
 }
 
+const defaultCachingHeaders = {
+    "Cache-Control": "max-age=86400"
+};
+
 function handleRedirectRequest (context, destination) {
     if (destination)
-        return Response.redirect(destination, 301);
+        return new Response(null, {
+            status: 301,
+            headers: {
+                "Location": destination,
+                ...defaultCachingHeaders
+            }
+        });
     else
         return context.next();
 }
 
 function handleTxtRequest (context, destination) {
     if (destination)
-        return new Response(destination);
+        return new Response(destination, {
+            headers: defaultCachingHeaders
+        });
     else
         return context.next();
 }
 
 export async function onRequestGet(context) {
-    const [destination, requestType] = await analyzeRequest(context.request, context.env.REDIRECTS);
+    const request = context.request;
+    const cache = caches.default;
+    const cached = await cache.match(request);
+    if (cached)
+        return cached;
+    const [destination, requestType] = await analyzeRequest(request, context.env.REDIRECTS);
     const handler = requestType === "r" ? handleRedirectRequest : handleTxtRequest;
-    return handler(context, destination);
+    const response = await handler(context, destination);
+    context.waitUntil(cache.put(request, response.clone()));
+    return response;
 }
