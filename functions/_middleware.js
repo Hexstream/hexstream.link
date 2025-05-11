@@ -18,7 +18,7 @@ function handleDestination (type, destination, context) {
                 headers: defaultCachingHeaders
             });
         default:
-            throw new Error(`Unexpected type "{type}".`);
+            throw new Error(`Unexpected type "${type}".`);
         }
     }
     else
@@ -29,6 +29,39 @@ function analyzePathname (pathname) {
     return pathname.endsWith(".txt") ? [pathname.slice(0, -4), "t"] : [pathname, "r"];
 }
 
+function beautifyEncodedURIComponent (component) {
+    return component.replaceAll("%3A", ":").replaceAll("%2F", "/");
+}
+
+function constructValidationURL (type, targetURL) {
+    function constructURL (baseURL, parameterName) {
+        const params = new URLSearchParams({
+            [parameterName]: new URL(targetURL)
+        });
+        const query = beautifyEncodedURIComponent(params.toString());
+        return `${baseURL}?${query}`;
+    }
+    switch (type) {
+    case "html":
+        return constructURL("https://validator.w3.org/nu/", "doc");
+    case "css":
+        return constructURL("https://jigsaw.w3.org/css-validator/validator", "uri");
+    default:
+        throw new Error(`Unexpected type "${type}".`);
+    }
+}
+
+async function pathToDestination (path, context) {
+    if (path === "/validate") {
+        const params = new URL(context.request.url).searchParams;
+        const type = params.get("type");
+        const url = params.get("url");
+        return constructValidationURL(type, url);
+    }
+    else
+        return context.env.REDIRECTS.get(path);
+}
+
 export async function onRequestGet(context) {
     const request = context.request;
     const cache = caches.default;
@@ -36,7 +69,7 @@ export async function onRequestGet(context) {
     if (cached)
         return cached;
     const [path, type] = analyzePathname(new URL(request.url).pathname);
-    const destination = await context.env.REDIRECTS.get(path);
+    const destination = await pathToDestination(path, context);
     const response = await handleDestination(type, destination, context);
     context.waitUntil(cache.put(request, response.clone()));
     return response;
