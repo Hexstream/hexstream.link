@@ -12,16 +12,20 @@
         "value": "https://www.hexstreamsoft.com/resources/#dvorak"
     },
     {
-        "key": "/me",
-        "value": "https://status-quo.hexstream.expert/articles/planck-ez-interview/images/hexstream-2020-11-18.jpg"
-    },
-    {
         "key": "/name",
         "value": "https://whoami.hexstream.xyz/#real-name"
     },
     {
         "key": "/name/audio",
         "value": "https://whoami.hexstream.xyz/Jean-Philippe_Paradis.mp3"
+    },
+    {
+        "key": "/me",
+        "value": "https://status-quo.hexstream.expert/articles/planck-ez-interview/images/hexstream-2020-11-18.jpg"
+    },
+    {
+        "key": "/strong",
+        "value": "https://status-quo.hexstream.expert/articles/planck-ez-interview/#weight-lifting"
     },
     {
         "key": "/oc",
