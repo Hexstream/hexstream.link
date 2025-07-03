@@ -8,6 +8,10 @@
         "value": "https://status-quo.hexstream.expert/hardware/planck-ez/#my-config"
     },
     {
+        "key": "/dvorak",
+        "value": "https://www.hexstreamsoft.com/resources/#dvorak"
+    },
+    {
         "key": "/me",
         "value": "https://status-quo.hexstream.expert/articles/planck-ez-interview/images/hexstream-2020-11-18.jpg"
     },
