@@ -1,5 +1,9 @@
 [
     {
+        "key": "/sponsor",
+        "value": "https://sponsors.hexstreamsoft.com/about/"
+    },
+    {
         "key": "/format",
         "value": "https://www.hexstreamsoft.com/articles/common-lisp-format-reference/clhs-summary/#subsections-summary-table"
     },
