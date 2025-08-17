@@ -20,6 +20,10 @@
         "value": "https://www.furaffinity.net/user/hexstream/"
     },
     {
+        "key": "/tiktok",
+        "value": "https://www.tiktok.com/@hexstream"
+    },
+    {
         "key": "/derpibooru",
         "value": "https://derpibooru.org/profiles/Hexstream"
     }
