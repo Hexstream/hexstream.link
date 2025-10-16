@@ -26,5 +26,9 @@
     {
         "key": "/derpibooru",
         "value": "https://derpibooru.org/profiles/Hexstream"
+    },
+    {
+        "key": "/duolingo",
+        "value": "https://www.duolingo.com/profile/Hexstream"
     }
 ]
